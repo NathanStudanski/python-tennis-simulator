@@ -19,7 +19,7 @@ To run the simulator you will need to introduce manually some stats for each pla
 4. 1st Serve Return Points Won
 5. 2nd Serve Return Points Won
 
-You can find those stats in the [ATP website]: http://www.atpworldtour.com/
+You can find those stats in the [ATP website](http://www.atpworldtour.com/)
 
 Other amounts you need to introduce in the program
 ----------------------------
