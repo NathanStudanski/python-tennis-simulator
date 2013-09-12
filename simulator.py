@@ -2,6 +2,7 @@ import random
 from model import TennisPlayer
 
 def play_game(player1, player2):
+    #Function to simulate a single game. The score goes from 0 to 4 instead of from 0 to 40 to simplify.
     score = [0, 0]
 
     while True:
@@ -20,6 +21,8 @@ def play_game(player1, player2):
             score[1] += 1
     
         elif serving_player == False and returning_player == False:
+            """Next line looks random but I had to compensate when both players fail, and after tons 
+            of tests this way gave more accurate results"""
             if random.random() <= 0.275:
                 score[0] += 1
         
@@ -39,7 +42,8 @@ def play_game(player1, player2):
         
         elif score[1] >= 4:
             break
-
+        
+    #This is to implement deuce situations and adventages.
     if score[0] >= 4:
         return player1
 
@@ -52,6 +56,8 @@ def play_game(player1, player2):
         
 
 def play_set(player1, player2):
+    """Function to simulate an entire set, playing games until one of the 
+    two players scores 6 games."""
     score = [0, 0]
     
     while True:
@@ -67,7 +73,8 @@ def play_set(player1, player2):
     
             elif score[1] >= 6:
                 break
-                
+            
+            """This is to rotate the serving order between the two players"""    
             if n == 0:
                 if play_game(player1, player2) == player1:
                     score[0] += 1
@@ -79,7 +86,9 @@ def play_set(player1, player2):
                     score[0] += 1
                 else:
                     score[1] += 1
-                    
+        
+        """The Tie break is not implemented: Instead of that, the player must win with 
+        a difference bigger than 1."""
         if score[0] == 6 and score[0] - score[1] < 2:
             score[0] -= 1
             score[1] -= 1
