@@ -6,8 +6,8 @@ def main():
     player1 = TennisPlayer(float(input('Player 1 - % First Serve: ')),float(input('Player 1 - % First Serve Points Won: ')), float(input('Player 1 - % Second Serve Points Won: ')), float(input('Player 1 - % First Serve Return Points Won: ')),  float(input('Player 1 - % Second Serve Return Points Won: ')))
     player2 = TennisPlayer(float(input('Player 2 - % First Serve: ')),float(input('Player 2 - % First Serve Points Won: ')), float(input('Player 2 - % Second Serve Points Won: ')), float(input('Player 2 - % First Serve Return Points Won: ')),  float(input('Player 2 - % Second Serve Return Points Won: ')))
 
-    number_of_simulations = int(input('How many simulations do you want to reproduce? '))
     number_of_sets = int(input('How many sets for each match? '))
+    number_of_simulations = int(input('How many simulations do you want to reproduce? '))
 
     for n in range(number_of_simulations):
         if play_match(number_of_sets, player1, player2) == 1:
