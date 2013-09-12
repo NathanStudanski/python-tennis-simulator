@@ -30,4 +30,5 @@ Other amounts you need to introduce in the program
 Output
 ----------------------------
 Player1: Number of matches won - % 
+
 Player2: Number of matches won - % 
