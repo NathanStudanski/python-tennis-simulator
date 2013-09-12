@@ -11,7 +11,7 @@ Usage
 
 Stats
 ----------------------------
-To run the simulator you will need to introduce manually some stats for each player (all of them as a percentage):
+To run the simulator you will need to introduce manually some stats for each player (all of them in this format, ex: 0.55, 0.84,...)
 
 1. 1st Serve
 2. 1st Serve Points Won
